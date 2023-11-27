@@ -1,22 +1,15 @@
-#include "get_next_line_bonus.h"
+#include "get_next_line.h"
 
-void	ft_nextline(char *str)
+int	ft_end_ofthe_line(char *str)
 {
-	size_t	i;
-	size_t	j;
+	int	i;
 
 	i = 0;
 	while (str[i] != '\n' && str[i] != 0)
 		i++;
 	if (str[i] == '\n')
 		i++;
-	j = 0;
-	while (str[i + j])
-	{
-		str[j] = str[i + j];
-		j++;
-	}
-	str[j] = 0;
+	return (i);
 }
 
 size_t	ft_strlen(char *str)
@@ -52,11 +45,7 @@ char	*ft_strdup(char *s)
 	int		i;
 
 	i = 0;
-	l = 0;
-	while (s[l] != '\n' && s[l] != 0)
-		l++;
-	if (s[l] == '\n')
-		l++;
+	l = ft_end_ofthe_line(s);
 	dest = malloc(sizeof(char) * (l + 1));
 	if (!dest)
 		return (NULL);
@@ -73,22 +62,16 @@ char	*ft_strdup(char *s)
 char	*ft_strjoin(char *s1, char *s2)
 {
 	char	*ptr;
-	size_t		i;
-	size_t		j;
-	size_t		l;
+	int		i;
+	int		j;
+	int		l;
 
-	if (!s1 || !s2)
-		return (NULL);
 	i = 0;
-	l = 0;
 	j = 0;
-	while (s2[l] != '\n' && s2[l] != 0)
-		l++;
-	if (s2[l] == '\n')
-		l++;
+	l = ft_end_ofthe_line(s2);
 	ptr = malloc(sizeof(char) * (ft_strlen(s1) + l + 1));
 	if (!ptr)
-		return (free(s1),NULL);
+		return (free(s1), NULL);
 	while (s1 && s1[i])
 	{
 		ptr[i] = s1[i];

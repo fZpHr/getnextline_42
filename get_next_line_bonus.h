@@ -4,7 +4,7 @@
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 1
-# endif
+#endif
 
 # include <unistd.h>
 # include <stdlib.h>
@@ -14,6 +14,5 @@ char	*get_next_line(int fd);
 char	*ft_strdup(char *str);
 int		ft_checkline(char *str);
 char	*ft_strjoin(char *s1, char *s2);
-void	ft_nextline(char *str);
 
 #endif
