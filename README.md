@@ -19,11 +19,19 @@ cd get_next_line
 make
 ```
 
-3. Link the compiled library to your project by adding `libft.a` to your compilation flags.
+3. If you want to enable additional functionality, such as handling multiple file descriptors or custom buffer sizes, use the `make bonus` command:
+```bash
+make bonus
+```
 
-4. Include the header file `get_next_line.h` in your source files where you want to use the function.
+4. If you want to specify a custom buffer size, use the `BUFFER_SIZE` flag during compilation. For example, to set the buffer size to 64, compile with:
+```bash
+gcc -Wall -Wextra -Werror -D BUFFER_SIZE=64 your_source_files.c get_next_line.c get_next_line_utils.c -o your_executable
+```
 
-5. You are now ready to use Get Next Line in your project!
+5. Include the header file `get_next_line.h` in your source files where you want to use the function.
+
+6. You are now ready to use Get Next Line in your project!
 
 ## Usage
 
