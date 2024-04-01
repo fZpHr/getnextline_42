@@ -10,8 +10,8 @@ To use Get Next Line, follow the steps below:
 
 1. Clone the project from the Git repository:
 ```bash
-git clone <link_to_repository>
-cd get_next_line
+git clone git@github.com:fZpHr/getnewline_42.git
+cd getnewline_42
 ```
 
 2. Compile the source code using the provided Makefile:
