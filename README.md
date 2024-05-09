@@ -41,8 +41,3 @@ To use Get Next Line in your project, call the function `get_next_line(fd, &line
 
 For bonus functionality, you can modify the Get Next Line function to handle multiple file descriptors and/or custom buffer sizes. Additionally, you can implement error handling and improve efficiency for large files or special cases.
 
-## Notes
-
-- Make sure to handle memory allocation and deallocation properly to avoid memory leaks.
-- Test your implementation thoroughly with different input files and edge cases.
-
